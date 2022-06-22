@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <span id="cnt_span">Total clicks: 0</span>
+    <button id="btn">Click me</button>
+  </body>
+  <script>
+    let counter = 0;
+    const button = document.getElementById("btn");
+    const span = document.getElementById("cnt_span");
+
+    const countUp = () => {
+      counter += 1;
+      span.innerText = `Total clicks: ${counter}`;
+    };
+    button.addEventListener("click", countUp);
+  </script>
+</html>
+<!-- 
+
+
+	1. html 생성
+	2. getgetElementById 을 사용해 해당 element 를 가져옴
+	3. 이벤트를 추가
+	4. span 의 innerText 동적 수정 코드를 작성
+
+	하지만 이렇게 많은 양을 처리하다보면 코드가 매우 복잡해져서 어려운 상황에 봉착함
+ -->
